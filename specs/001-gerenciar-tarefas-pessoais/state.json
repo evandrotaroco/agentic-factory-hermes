@@ -1,0 +1,22 @@
+{
+  "feature": "001-gerenciar-tarefas-pessoais",
+  "base_branch": "main",
+  "branch": "001-gerenciar-tarefas-pessoais",
+  "gh_path": "C:/Program Files/GitHub CLI/gh.exe",
+  "pull_request": null,
+  "last_reviewed_commit": null,
+  "commands": {"test": null, "lint": null, "build": null},
+  "stage": "AGUARDANDO_REVISAO_HUMANA",
+  "artifacts": {
+    "specs/001-gerenciar-tarefas-pessoais/spec.md": "E1",
+    "specs/001-gerenciar-tarefas-pessoais/checklists/requirements.md": "E1"
+  },
+  "gates": {
+    "E0": {"status": "validado", "modo": "demonstração supervisionada", "base_protegida": true, "commit_base": "7733293202fbba0f548c67e3fc9afa971d50e943"},
+    "E1": {"responsavel": "analista-requisitos", "status_retorno": "HUMAN_REVIEW_REQUIRED", "delegation_id": "deleg_347b356f", "discord": "confirmado", "checklist": "16/16", "artefatos_validados": true, "devolucoes": 0}
+  },
+  "tasks_done": [],
+  "blockers": [],
+  "human_checkpoints": {"specification_review": {"status": "pendente"}},
+  "updated_at": "2026-11-22T20:46:05-03:00"
+}
