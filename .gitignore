@@ -1,0 +1,23 @@
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
