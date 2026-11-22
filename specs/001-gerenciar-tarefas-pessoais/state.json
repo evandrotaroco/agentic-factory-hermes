@@ -6,7 +6,7 @@
   "pull_request": null,
   "last_reviewed_commit": null,
   "commands": {"test": null, "lint": null, "build": null},
-  "stage": "AGUARDANDO_REVISAO_HUMANA",
+  "stage": "ESPECIFICACAO_APROVADA",
   "artifacts": {
     "specs/001-gerenciar-tarefas-pessoais/spec.md": "E1",
     "specs/001-gerenciar-tarefas-pessoais/checklists/requirements.md": "E1"
@@ -17,6 +17,6 @@
   },
   "tasks_done": [],
   "blockers": [],
-  "human_checkpoints": {"specification_review": {"status": "pendente"}},
-  "updated_at": "2026-11-22T20:46:05-03:00"
+  "human_checkpoints": {"specification_review": {"status": "aprovado", "aprovado_em": "2026-11-22T20:48:17-03:00", "mensagem": "Aprovo a especificação apresentada."}},
+  "updated_at": "2026-11-22T20:48:17-03:00"
 }
