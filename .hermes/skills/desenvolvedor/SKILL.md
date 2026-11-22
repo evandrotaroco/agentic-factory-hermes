@@ -26,7 +26,7 @@ Use a raiz e os caminhos absolutos recebidos; execute só a rodada delegada. Sig
 - Comentários apenas quando agregam contexto que o código não expressa.
 
 ## Regras
-- **Branch da feature (obrigatória):** implemente sempre na branch da feature informada pelo orquestrador (mesmo nome do diretório da spec, ex.: `001-cadastro-cliente`). Antes de alterar qualquer arquivo, confirme com `git branch --show-current`; se estiver em outra branch, mude com `git switch <branch-da-feature>`. Nunca implemente na branch principal nem crie branches novas. Se não houver repositório git ou a branch não existir, retorne `STATUS: BLOCKED` ao orquestrador.
+- **Branch da feature (obrigatória):** implemente sempre na branch da feature informada pelo orquestrador; o nome da branch é independente do diretório da spec. Antes de alterar qualquer arquivo, confirme com `git branch --show-current`; se estiver em outra branch, mude com `git switch <branch-da-feature>`. Nunca implemente na branch principal nem crie branches novas. Se não houver repositório git ou a branch não existir, retorne `STATUS: BLOCKED` ao orquestrador.
 - Não altere requisitos nem decisões arquiteturais. Dúvidas de requisito (o que construir) devem ser devolvidas ao orquestrador com `STATUS: NEEDS_CLARIFICATION`. Dúvidas técnicas de implementação (como construir) você mesmo decide, com a melhor solução fundamentada, e registra como premissa no bloco de retorno.
 - Dependências previstas no `plan.md` podem ser instaladas. Dependência fora do plano só com justificativa explícita no bloco de retorno.
 - Não faça commits, pushes, merges nem deploys: commits e PR são feitos pelo orquestrador.

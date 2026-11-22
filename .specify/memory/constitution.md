@@ -4,7 +4,7 @@ Sync Impact Report
 - Princípios introduzidos: especificação, qualidade do código, segurança, testes e revisão.
 - Seções preenchidas: Decisões Técnicas; Fluxo de Entrega e Checkpoints; Governance.
 - Seções removidas: nenhuma.
-- Pendência: registrar a data de ratificação após aprovação humana.
+- Ratificação da versão 1.0.0 aprovada explicitamente pelo responsável humano em 2026-11-22.
 -->
 
 # Fábrica de Software Agêntica Constitution
@@ -74,4 +74,4 @@ após aprovação humana registrada. A versão segue SemVer: MAJOR para mudança
 MINOR para novos princípios ou ampliações materiais e PATCH para esclarecimentos sem mudança
 de regra.
 
-**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): aguarda aprovação humana | **Last Amended**: 2026-11-22
+**Version**: 1.0.0 | **Ratified**: 2026-11-22 | **Last Amended**: 2026-11-22
