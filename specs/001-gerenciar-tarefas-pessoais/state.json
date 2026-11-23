@@ -10,7 +10,7 @@
     "lint": null,
     "build": null
   },
-  "stage": "ANALISANDO",
+  "stage": "IMPLEMENTANDO",
   "artifacts": {
     "specs/001-gerenciar-tarefas-pessoais/spec.md": "E1",
     "specs/001-gerenciar-tarefas-pessoais/checklists/requirements.md": "E1",
@@ -19,7 +19,14 @@
     "specs/001-gerenciar-tarefas-pessoais/data-model.md": "E2",
     "specs/001-gerenciar-tarefas-pessoais/contracts/web-ui.md": "E2",
     "specs/001-gerenciar-tarefas-pessoais/quickstart.md": "E2",
-    "specs/001-gerenciar-tarefas-pessoais/tasks.md": "E3"
+    "specs/001-gerenciar-tarefas-pessoais/tasks.md": "E3",
+    "demo/.gitignore": "E4",
+    "demo/package.json": "E4",
+    "demo/package-lock.json": "E4",
+    "demo/playwright.config.js": "E4",
+    "demo/public/index.html": "E4",
+    "demo/tests/unit/setup.test.js": "E4",
+    "demo/tests/e2e/smoke.spec.js": "E4"
   },
   "gates": {
     "E0": {
@@ -96,10 +103,40 @@
         "Separação dos testes de aceite, escopo demo/ e gates por fase preservados.",
         "O cabeçalho histórico da spec menciona a elaboração na main. A branch efetiva coincide com o estado e o plano; nenhuma edição da spec aprovada foi necessária."
       ],
-      "committed": false
+      "committed": true,
+      "commit": "aa875e1"
+    },
+    "E4": {
+      "status": "Setup validado; commit pendente",
+      "fase": "Setup",
+      "tasks": [
+        "T001",
+        "T002",
+        "T003",
+        "T004",
+        "T005",
+        "T006"
+      ],
+      "prerequisites_exit": 0,
+      "status_retorno": "DONE",
+      "delegation_id": "deleg_0ed7d052",
+      "discord": "confirmado",
+      "testes": {
+        "comando": "npm --prefix demo test",
+        "exit_code": 0,
+        "node_pass": 1,
+        "chromium_pass": 1
+      }
     }
   },
-  "tasks_done": [],
+  "tasks_done": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005",
+    "T006"
+  ],
   "blockers": [],
   "human_checkpoints": {
     "specification_review": {
@@ -108,5 +145,5 @@
       "mensagem": "Aprovo a especificação apresentada."
     }
   },
-  "updated_at": "2026-11-22T21:21:57-03:00"
+  "updated_at": "2026-11-22T21:28:52-03:00"
 }

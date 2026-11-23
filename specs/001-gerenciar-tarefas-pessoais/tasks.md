@@ -18,12 +18,12 @@ description: "Tarefas de implementação da feature Gerenciar tarefas pessoais"
 
 **Objetivo**: disponibilizar página mínima e suíte executável, sem antecipar as operações de usuário.
 
-- [ ] T001 [P] Criar `demo/.gitignore` para `node_modules/`, `test-results/` e `playwright-report/`.
-- [ ] T002 [P] Criar `demo/public/index.html` como página HTML mínima em português com título e cabeçalho estáveis para o smoke, sem introduzir fluxo de tarefa nesta fase.
-- [ ] T003 Configurar `demo/package.json` privado com `type: module`, `test` igual a `node --test "tests/unit/*.test.js" && playwright test` e `browser:install` igual a `playwright install chromium`; fixar a versão exata compatível de `@playwright/test` como única dependência direta de desenvolvimento, gerar `demo/package-lock.json` e instalar as dependências e o Chromium correspondente conforme o quickstart (Node.js 24, npm 11, Python 3.14; após T001).
-- [ ] T004 [P] Configurar `demo/playwright.config.js` para descobrir `*.spec.js` em `demo/tests/e2e/` e `demo/tests/acceptance/`, executar Chromium com contexto isolado por teste e iniciar de `demo/` o comando `python3 -m http.server --bind 127.0.0.1 --directory public 4173`, com URL/base `http://127.0.0.1:4173/` e sem reutilizar servidor existente (após T003).
-- [ ] T005 [P] Criar em `demo/tests/unit/setup.test.js` um teste `node:test` que verifica o manifesto privado, ESM e scripts do plano (após T003).
-- [ ] T006 Criar em `demo/tests/e2e/smoke.spec.js` um smoke Chromium que navega a `/` pelo servidor real e verifica sucesso HTTP e o cabeçalho visível (após T002 e T004).
+- [X] T001 [P] Criar `demo/.gitignore` para `node_modules/`, `test-results/` e `playwright-report/`.
+- [X] T002 [P] Criar `demo/public/index.html` como página HTML mínima em português com título e cabeçalho estáveis para o smoke, sem introduzir fluxo de tarefa nesta fase.
+- [X] T003 Configurar `demo/package.json` privado com `type: module`, `test` igual a `node --test "tests/unit/*.test.js" && playwright test` e `browser:install` igual a `playwright install chromium`; fixar a versão exata compatível de `@playwright/test` como única dependência direta de desenvolvimento, gerar `demo/package-lock.json` e instalar as dependências e o Chromium correspondente conforme o quickstart (Node.js 24, npm 11, Python 3.14; após T001).
+- [X] T004 [P] Configurar `demo/playwright.config.js` para descobrir `*.spec.js` em `demo/tests/e2e/` e `demo/tests/acceptance/`, executar Chromium com contexto isolado por teste e iniciar de `demo/` o comando `python3 -m http.server --bind 127.0.0.1 --directory public 4173`, com URL/base `http://127.0.0.1:4173/` e sem reutilizar servidor existente (após T003).
+- [X] T005 [P] Criar em `demo/tests/unit/setup.test.js` um teste `node:test` que verifica o manifesto privado, ESM e scripts do plano (após T003).
+- [X] T006 Criar em `demo/tests/e2e/smoke.spec.js` um smoke Chromium que navega a `/` pelo servidor real e verifica sucesso HTTP e o cabeçalho visível (após T002 e T004).
 
 **Checkpoint**: o comando comum executa o teste Node de configuração e o smoke Chromium real.
 
