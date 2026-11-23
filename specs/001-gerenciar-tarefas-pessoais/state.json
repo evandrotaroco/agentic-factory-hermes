@@ -5,18 +5,108 @@
   "gh_path": "C:/Program Files/GitHub CLI/gh.exe",
   "pull_request": null,
   "last_reviewed_commit": null,
-  "commands": {"test": null, "lint": null, "build": null},
-  "stage": "ESPECIFICACAO_APROVADA",
+  "commands": {
+    "test": "npm --prefix demo test",
+    "lint": null,
+    "build": null
+  },
+  "stage": "ANALISANDO",
   "artifacts": {
     "specs/001-gerenciar-tarefas-pessoais/spec.md": "E1",
-    "specs/001-gerenciar-tarefas-pessoais/checklists/requirements.md": "E1"
+    "specs/001-gerenciar-tarefas-pessoais/checklists/requirements.md": "E1",
+    "specs/001-gerenciar-tarefas-pessoais/plan.md": "E2",
+    "specs/001-gerenciar-tarefas-pessoais/research.md": "E2",
+    "specs/001-gerenciar-tarefas-pessoais/data-model.md": "E2",
+    "specs/001-gerenciar-tarefas-pessoais/contracts/web-ui.md": "E2",
+    "specs/001-gerenciar-tarefas-pessoais/quickstart.md": "E2",
+    "specs/001-gerenciar-tarefas-pessoais/tasks.md": "E3"
   },
   "gates": {
-    "E0": {"status": "validado", "modo": "demonstração supervisionada", "base_protegida": true, "commit_base": "7733293202fbba0f548c67e3fc9afa971d50e943"},
-    "E1": {"responsavel": "analista-requisitos", "status_retorno": "HUMAN_REVIEW_REQUIRED", "delegation_id": "deleg_347b356f", "discord": "confirmado", "checklist": "16/16", "artefatos_validados": true, "devolucoes": 0}
+    "E0": {
+      "status": "validado",
+      "modo": "demonstração supervisionada",
+      "base_protegida": true,
+      "commit_base": "7733293202fbba0f548c67e3fc9afa971d50e943"
+    },
+    "E1": {
+      "responsavel": "analista-requisitos",
+      "status_retorno": "HUMAN_REVIEW_REQUIRED",
+      "delegation_id": "deleg_347b356f",
+      "discord": "confirmado",
+      "checklist": "16/16",
+      "artefatos_validados": true,
+      "devolucoes": 0
+    },
+    "E2": {
+      "responsavel": "arquiteto",
+      "pedido_de_retomada": "Continue para a E2",
+      "confirmacao_da_chamada": "Confirmar esta chamada ao Arquiteto",
+      "delegation_id": "deleg_d8dc68cd",
+      "status_retorno": "DONE",
+      "discord": "confirmado",
+      "devolucoes": 0,
+      "setup": {
+        "script": ".specify/scripts/powershell/setup-plan.ps1 -Json",
+        "exit_code": 0,
+        "runner": "orquestrador",
+        "branch": "001-gerenciar-tarefas-pessoais",
+        "feature_dir": "specs/001-gerenciar-tarefas-pessoais",
+        "plan": "specs/001-gerenciar-tarefas-pessoais/plan.md"
+      },
+      "confirmacao_da_redelegacao": "Autorizo especificamente uma nova delegação ao Arquiteto para continuar a E2.",
+      "status": "validado",
+      "constitution_check": "aprovado sem ressalvas"
+    },
+    "E3": {
+      "responsavel": "criador-tarefas",
+      "status": "validado",
+      "setup": {
+        "script": ".specify/scripts/powershell/setup-tasks.ps1 -Json",
+        "exit_code": 0,
+        "runner": "orquestrador",
+        "feature_dir": "specs/001-gerenciar-tarefas-pessoais"
+      },
+      "status_retorno": "DONE",
+      "delegation_id": "deleg_223e7fe9",
+      "discord": "confirmado",
+      "tarefas": 28,
+      "devolucoes": 0
+    },
+    "E3.5": {
+      "status": "validado",
+      "achados_criticos": 0,
+      "requisitos_cobertos": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007"
+      ],
+      "criterios_cobertos": [
+        "SC-001",
+        "SC-002",
+        "SC-003",
+        "SC-004"
+      ],
+      "comando_prerequisitos_saida": 0,
+      "observacoes": [
+        "Tarefa.id, Tarefa.title e Tarefa.status têm citações canônicas em tarefas de implementação.",
+        "Separação dos testes de aceite, escopo demo/ e gates por fase preservados.",
+        "O cabeçalho histórico da spec menciona a elaboração na main. A branch efetiva coincide com o estado e o plano; nenhuma edição da spec aprovada foi necessária."
+      ],
+      "committed": false
+    }
   },
   "tasks_done": [],
   "blockers": [],
-  "human_checkpoints": {"specification_review": {"status": "aprovado", "aprovado_em": "2026-11-22T20:48:17-03:00", "mensagem": "Aprovo a especificação apresentada."}},
-  "updated_at": "2026-11-22T20:48:17-03:00"
+  "human_checkpoints": {
+    "specification_review": {
+      "status": "aprovado",
+      "aprovado_em": "2026-11-22T20:48:17-03:00",
+      "mensagem": "Aprovo a especificação apresentada."
+    }
+  },
+  "updated_at": "2026-11-22T21:21:57-03:00"
 }
