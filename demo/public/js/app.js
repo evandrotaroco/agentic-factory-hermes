@@ -1,5 +1,5 @@
 import { loadTasks, saveTasks } from './storage.js';
-import { registerTask, TaskStatus } from './tasks.js';
+import { completeTask, registerTask, TaskStatus } from './tasks.js';
 
 const statusLabels = {
   [TaskStatus.PENDING]: 'Pendente',
@@ -51,6 +51,22 @@ function mountTaskPage(browser) {
     return;
   }
 
+  function saveCandidate(candidate) {
+    if (state.save(candidate).ok) return true;
+
+    storageError.textContent = 'Não foi possível salvar a alteração.';
+    return false;
+  }
+
+  function concludeTask(id) {
+    const current = state.tasks;
+    const candidate = completeTask(current, id);
+    if (candidate === current) return;
+
+    storageError.textContent = '';
+    if (saveCandidate(candidate)) renderTasks();
+  }
+
   function renderTasks() {
     const items = state.tasks.map((task) => {
       const item = document.createElement('li');
@@ -61,6 +77,15 @@ function mountTaskPage(browser) {
       status.className = 'task-status';
       status.textContent = statusLabels[task.status];
       item.append(title, status);
+
+      if (task.status === TaskStatus.PENDING) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = 'Concluir';
+        button.addEventListener('click', () => concludeTask(task.id));
+        item.append(button);
+      }
+
       return item;
     });
 
@@ -89,10 +114,7 @@ function mountTaskPage(browser) {
     titleField.removeAttribute('aria-invalid');
     titleError.textContent = '';
 
-    if (!state.save(candidate).ok) {
-      storageError.textContent = 'Não foi possível salvar a alteração.';
-      return;
-    }
+    if (!saveCandidate(candidate)) return;
 
     form.reset();
     renderTasks();

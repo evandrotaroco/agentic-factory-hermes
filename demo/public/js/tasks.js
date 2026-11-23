@@ -15,3 +15,12 @@ export function registerTask(tasks, id, title) {
   const task = { id, title, status: TaskStatus.PENDING };
   return isTask(task) ? [...tasks, task] : null;
 }
+
+export function completeTask(tasks, id) {
+  const index = tasks.findIndex((task) => task.id === id && task.status === TaskStatus.PENDING);
+  if (index === -1) return tasks;
+
+  const candidate = tasks.slice();
+  candidate[index] = { ...tasks[index], status: TaskStatus.COMPLETED };
+  return candidate;
+}

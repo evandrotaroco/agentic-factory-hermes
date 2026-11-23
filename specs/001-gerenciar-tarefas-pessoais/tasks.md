@@ -66,13 +66,13 @@ description: "Tarefas de implementação da feature Gerenciar tarefas pessoais"
 
 ### Testes do Desenvolvedor
 
-- [ ] T017 [P] [US2] Criar em `demo/tests/e2e/concluir.spec.js` o teste de contrato independente com duas pendentes homônimas, usando botão `Concluir` escopado ao item escolhido e verificando também a ausência do botão após conclusão (FR-001, FR-003, FR-005; parcelas de SC-001 e SC-003; [contrato](contracts/web-ui.md)).
-- [ ] T018 [P] [US2] Criar em `demo/tests/unit/concluir.test.js` os testes de transição pura: efeito no ID selecionado, outra entrada preservada, ID ausente e conclusão repetida sem efeito (FR-005; [data-model.md](data-model.md)).
+- [X] T017 [P] [US2] Criar em `demo/tests/e2e/concluir.spec.js` o teste de contrato independente com duas pendentes homônimas, usando botão `Concluir` escopado ao item escolhido e verificando também a ausência do botão após conclusão (FR-001, FR-003, FR-005; parcelas de SC-001 e SC-003; [contrato](contracts/web-ui.md)).
+- [X] T018 [P] [US2] Criar em `demo/tests/unit/concluir.test.js` os testes de transição pura: efeito no ID selecionado, outra entrada preservada, ID ausente e conclusão repetida sem efeito (FR-005; [data-model.md](data-model.md)).
 
 ### Implementação
 
-- [ ] T019 [US2] Implementar a transição pura de conclusão em `demo/public/js/tasks.js` por `Tarefa.id`, com resultado conforme `Tarefa.status`, ambos em [data-model.md, Tarefa](data-model.md#entidade-tarefa); tratar ID ausente e repetição sem alteração (FR-005; SC-001, SC-003; após T017 e T018).
-- [ ] T020 [US2] Mostrar `Concluir` apenas em itens pendentes e ligar o botão ao ID em `demo/public/js/app.js`; manter o item na lista e atualizar o estado textual apenas após salvar, sem recarga nem gravação para transição sem efeito (FR-001, FR-003, FR-005; SC-001, SC-003; após T019).
+- [X] T019 [US2] Implementar a transição pura de conclusão em `demo/public/js/tasks.js` por `Tarefa.id`, com resultado conforme `Tarefa.status`, ambos em [data-model.md, Tarefa](data-model.md#entidade-tarefa); tratar ID ausente e repetição sem alteração (FR-005; SC-001, SC-003; após T017 e T018).
+- [X] T020 [US2] Mostrar `Concluir` apenas em itens pendentes e ligar o botão ao ID em `demo/public/js/app.js`; manter o item na lista e atualizar o estado textual apenas após salvar, sem recarga nem gravação para transição sem efeito (FR-001, FR-003, FR-005; SC-001, SC-003; após T019).
 
 **Checkpoint**: executar a regressão independente de US2 sem depender de dados de US1; manter US1 verde.
 
