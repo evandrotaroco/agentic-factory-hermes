@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tarefas pessoais</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./js/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Tarefas pessoais</h1>
+      <form id="task-form" novalidate>
+        <fieldset id="task-controls" disabled>
+          <label for="task-title">Título</label>
+          <input id="task-title" name="title" type="text" required aria-describedby="title-error">
+          <button type="submit">Cadastrar</button>
+          <p id="title-error" role="alert"></p>
+        </fieldset>
+      </form>
+      <p id="storage-error" role="alert"></p>
+      <p id="empty-list" hidden>Nenhuma tarefa cadastrada.</p>
+      <ul id="task-list" aria-label="Tarefas cadastradas" hidden></ul>
+    </main>
+  </body>
+</html>
