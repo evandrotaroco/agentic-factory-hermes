@@ -38,7 +38,10 @@
     "demo/tests/e2e/titulo-obrigatorio.spec.js": "E4",
     "demo/tests/unit/cadastro.test.js": "E4",
     "demo/tests/e2e/concluir.spec.js": "E4",
-    "demo/tests/unit/concluir.test.js": "E4"
+    "demo/tests/unit/concluir.test.js": "E4",
+    "demo/tests/e2e/excluir.spec.js": "E4",
+    "demo/tests/e2e/persistencia.spec.js": "E4",
+    "demo/tests/unit/excluir.test.js": "E4"
   },
   "gates": {
     "E0": {
@@ -119,13 +122,14 @@
       "commit": "aa875e1"
     },
     "E4": {
-      "status": "US2 validada; commit pendente",
-      "fase": "US2",
+      "status": "US3 validada; commit pendente",
+      "fase": "US3",
       "tasks": [
-        "T017",
-        "T018",
-        "T019",
-        "T020"
+        "T021",
+        "T022",
+        "T023",
+        "T024",
+        "T025"
       ],
       "prerequisites_exit": 0,
       "fases": {
@@ -189,16 +193,35 @@
           },
           "status": "validado",
           "commit": "0ef2454"
+        },
+        "US2": {
+          "tasks": [
+            "T017",
+            "T018",
+            "T019",
+            "T020"
+          ],
+          "status_retorno": "DONE",
+          "delegation_id": "deleg_274e4dca",
+          "discord": "confirmado",
+          "testes": {
+            "comando": "npm --prefix demo test",
+            "exit_code": 0,
+            "node_pass": 41,
+            "chromium_pass": 10
+          },
+          "status": "validado",
+          "commit": "44c279c"
         }
       },
       "status_retorno": "DONE",
-      "delegation_id": "deleg_274e4dca",
+      "delegation_id": "deleg_823b8d1b",
       "discord": "confirmado",
       "testes": {
         "comando": "npm --prefix demo test",
         "exit_code": 0,
-        "node_pass": 41,
-        "chromium_pass": 10
+        "node_pass": 44,
+        "chromium_pass": 12
       }
     }
   },
@@ -222,7 +245,12 @@
     "T017",
     "T018",
     "T019",
-    "T020"
+    "T020",
+    "T021",
+    "T022",
+    "T023",
+    "T024",
+    "T025"
   ],
   "blockers": [],
   "human_checkpoints": {
@@ -232,5 +260,5 @@
       "mensagem": "Aprovo a especificação apresentada."
     }
   },
-  "updated_at": "2026-11-22T21:48:11-03:00"
+  "updated_at": "2026-11-22T21:53:35-03:00"
 }

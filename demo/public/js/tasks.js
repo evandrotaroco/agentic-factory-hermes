@@ -24,3 +24,8 @@ export function completeTask(tasks, id) {
   candidate[index] = { ...tasks[index], status: TaskStatus.COMPLETED };
   return candidate;
 }
+
+export function deleteTask(tasks, id) {
+  const index = tasks.findIndex((task) => task.id === id);
+  return index === -1 ? tasks : tasks.toSpliced(index, 1);
+}

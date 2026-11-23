@@ -84,14 +84,14 @@ description: "Tarefas de implementação da feature Gerenciar tarefas pessoais"
 
 ### Testes do Desenvolvedor
 
-- [ ] T021 [P] [US3] Criar em `demo/tests/e2e/excluir.spec.js` o teste de contrato independente com fixture sintética v1: excluir a concluída de um par homônimo, manter a pendente intacta e excluir a última com indicação de vazio, sem recarga (FR-001, FR-003, FR-006; aceite US3 1–2; [contrato](contracts/web-ui.md)).
-- [ ] T022 [P] [US3] Criar em `demo/tests/e2e/persistencia.spec.js` o teste de contrato que cadastra três títulos distintos pela UI, conclui um e exclui outro, recarrega na mesma origem e contexto e verifica exatamente a pendente e a concluída preservadas, sem retorno da excluída (FR-007; SC-004; [quickstart](quickstart.md)).
-- [ ] T023 [P] [US3] Criar em `demo/tests/unit/excluir.test.js` testes de transição pura para remoção da pendente ou da concluída por ID, preservação da outra tarefa homônima e nenhuma alteração com ID ausente (FR-006; [data-model.md](data-model.md)).
+- [X] T021 [P] [US3] Criar em `demo/tests/e2e/excluir.spec.js` o teste de contrato independente com fixture sintética v1: excluir a concluída de um par homônimo, manter a pendente intacta e excluir a última com indicação de vazio, sem recarga (FR-001, FR-003, FR-006; aceite US3 1–2; [contrato](contracts/web-ui.md)).
+- [X] T022 [P] [US3] Criar em `demo/tests/e2e/persistencia.spec.js` o teste de contrato que cadastra três títulos distintos pela UI, conclui um e exclui outro, recarrega na mesma origem e contexto e verifica exatamente a pendente e a concluída preservadas, sem retorno da excluída (FR-007; SC-004; [quickstart](quickstart.md)).
+- [X] T023 [P] [US3] Criar em `demo/tests/unit/excluir.test.js` testes de transição pura para remoção da pendente ou da concluída por ID, preservação da outra tarefa homônima e nenhuma alteração com ID ausente (FR-006; [data-model.md](data-model.md)).
 
 ### Implementação
 
-- [ ] T024 [US3] Implementar a remoção por `Tarefa.id` em `demo/public/js/tasks.js`, sem restringir a operação pelo `Tarefa.status`, segundo [data-model.md, Tarefa](data-model.md#entidade-tarefa); não alterar as demais entradas nem a ordem e tratar ID ausente sem efeito (FR-006; SC-001, SC-003; após T021–T023).
-- [ ] T025 [US3] Ligar `Excluir` a cada item em `demo/public/js/app.js`, salvar o documento sem a entrada removida usando o mecanismo de T009–T010 e só então atualizar a lista ou o estado vazio; não recarregar, não gravar quando não houver alteração e não guardar registro para restauração (FR-001, FR-003, FR-006, FR-007; SC-001, SC-003, SC-004; após T024).
+- [X] T024 [US3] Implementar a remoção por `Tarefa.id` em `demo/public/js/tasks.js`, sem restringir a operação pelo `Tarefa.status`, segundo [data-model.md, Tarefa](data-model.md#entidade-tarefa); não alterar as demais entradas nem a ordem e tratar ID ausente sem efeito (FR-006; SC-001, SC-003; após T021–T023).
+- [X] T025 [US3] Ligar `Excluir` a cada item em `demo/public/js/app.js`, salvar o documento sem a entrada removida usando o mecanismo de T009–T010 e só então atualizar a lista ou o estado vazio; não recarregar, não gravar quando não houver alteração e não guardar registro para restauração (FR-001, FR-003, FR-006, FR-007; SC-001, SC-003, SC-004; após T024).
 
 **Checkpoint**: US3 passa isoladamente por fixture e o fluxo de recarga confirma persistência real, sem comprometer US1 e US2.
 

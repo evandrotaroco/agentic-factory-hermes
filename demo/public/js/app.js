@@ -1,5 +1,5 @@
 import { loadTasks, saveTasks } from './storage.js';
-import { completeTask, registerTask, TaskStatus } from './tasks.js';
+import { completeTask, deleteTask, registerTask, TaskStatus } from './tasks.js';
 
 const statusLabels = {
   [TaskStatus.PENDING]: 'Pendente',
@@ -58,9 +58,9 @@ function mountTaskPage(browser) {
     return false;
   }
 
-  function concludeTask(id) {
+  function applyTaskChange(transition, id) {
     const current = state.tasks;
-    const candidate = completeTask(current, id);
+    const candidate = transition(current, id);
     if (candidate === current) return;
 
     storageError.textContent = '';
@@ -82,9 +82,15 @@ function mountTaskPage(browser) {
         const button = document.createElement('button');
         button.type = 'button';
         button.textContent = 'Concluir';
-        button.addEventListener('click', () => concludeTask(task.id));
+        button.addEventListener('click', () => applyTaskChange(completeTask, task.id));
         item.append(button);
       }
+
+      const deleteButton = document.createElement('button');
+      deleteButton.type = 'button';
+      deleteButton.textContent = 'Excluir';
+      deleteButton.addEventListener('click', () => applyTaskChange(deleteTask, task.id));
+      item.append(deleteButton);
 
       return item;
     });
