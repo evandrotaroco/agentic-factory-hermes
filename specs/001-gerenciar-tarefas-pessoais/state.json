@@ -4,13 +4,13 @@
   "branch": "001-gerenciar-tarefas-pessoais",
   "gh_path": "C:/Program Files/GitHub CLI/gh.exe",
   "pull_request": null,
-  "last_reviewed_commit": null,
+  "last_reviewed_commit": "dfcb061d656731756cdf998dfd9124fd19b496da",
   "commands": {
     "test": "npm --prefix demo test",
     "lint": null,
     "build": null
   },
-  "stage": "IMPLEMENTANDO",
+  "stage": "PUBLICANDO_PR",
   "artifacts": {
     "specs/001-gerenciar-tarefas-pessoais/spec.md": "E1",
     "specs/001-gerenciar-tarefas-pessoais/checklists/requirements.md": "E1",
@@ -43,7 +43,10 @@
     "demo/tests/e2e/persistencia.spec.js": "E4",
     "demo/tests/unit/excluir.test.js": "E4",
     "demo/tests/e2e/fluxos-integrados.spec.js": "E4",
-    "demo/tests/e2e/limites-interface.spec.js": "E4"
+    "demo/tests/e2e/limites-interface.spec.js": "E4",
+    "specs/001-gerenciar-tarefas-pessoais/review-report.md": "E5",
+    "specs/001-gerenciar-tarefas-pessoais/qa-report.md": "E6",
+    "demo/tests/acceptance/tarefas-pessoais.spec.js": "E6"
   },
   "gates": {
     "E0": {
@@ -124,7 +127,7 @@
       "commit": "aa875e1"
     },
     "E4": {
-      "status": "Polish validado; commit pendente",
+      "status": "validado",
       "fase": "Polish",
       "tasks": [
         "T026",
@@ -232,6 +235,28 @@
           },
           "status": "validado",
           "commit": "ba2b468"
+        },
+        "Polish": {
+          "tasks": [
+            "T026",
+            "T027",
+            "T028"
+          ],
+          "status_retorno": "DONE",
+          "delegation_id": "deleg_cb2592cc",
+          "discord": "confirmado",
+          "testes": {
+            "comando": "npm --prefix demo test",
+            "saidas_orquestrador": [
+              0,
+              0,
+              0
+            ],
+            "node_pass_por_execucao": 44,
+            "chromium_pass_por_execucao": 18
+          },
+          "status": "validado",
+          "commit": "dfcb061"
         }
       },
       "status_retorno": "DONE",
@@ -261,6 +286,58 @@
         "sintoma": "ERR_CONNECTION_REFUSED e interface não inicializada em loopback"
       },
       "correcao": "Fila do servidor de teste ampliada para absorver conexões simultâneas, mantendo loopback e cobertura."
+    },
+    "E5": {
+      "responsavel": "revisor-codigo",
+      "status": "validado",
+      "intervalo": "main...HEAD",
+      "head": "dfcb061d656731756cdf998dfd9124fd19b496da",
+      "status_retorno": "DONE",
+      "parecer": "aprovado com ressalvas",
+      "delegation_id": "deleg_b936ed91",
+      "discord": "confirmado",
+      "ressalvas": [
+        "Médio: foco do teclado se perde ao concluir ou excluir.",
+        "Baixo: comando do servidor de testes ajustado para ampliar a fila; registrar no PR."
+      ]
+    },
+    "E6": {
+      "responsavel": "qa",
+      "status": "validado",
+      "head": "dfcb061d656731756cdf998dfd9124fd19b496da",
+      "status_retorno": "DONE",
+      "parecer": "aprovado com ressalvas",
+      "delegation_id": "deleg_5d7b8093",
+      "discord": "confirmado",
+      "testes": {
+        "comando": "npm --prefix demo test",
+        "exit_code": 0,
+        "node_pass": 44,
+        "chromium_regressao_pass": 18,
+        "chromium_aceite_pass": 6
+      },
+      "revisao_testes": {
+        "status": "validado",
+        "arquivo": "demo/tests/acceptance/tarefas-pessoais.spec.js",
+        "sha256": "d2018a7633b6305999cdb7216aec3fdda72e91ca51aa72c4bed6beaf310cadae",
+        "delegation_id": "deleg_633560be",
+        "discord": "confirmado",
+        "parecer": "aprovado com ressalvas",
+        "ressalvas": [
+          "Médio: testes de homônimas não verificam diretamente os IDs.",
+          "Baixo: fixture de teste depende de origem literal."
+        ]
+      },
+      "verificacao_orquestrador": {
+        "comando": "npm --prefix demo test",
+        "exit_code": 0,
+        "node_pass": 44,
+        "chromium_regressao_pass": 18,
+        "chromium_aceite_pass": 6
+      }
+    },
+    "E7": {
+      "status": "aguardando autorização para commit local de E5/E6; publicação não iniciada"
     }
   },
   "tasks_done": [
@@ -301,5 +378,5 @@
       "mensagem": "Aprovo a especificação apresentada."
     }
   },
-  "updated_at": "2026-11-22T22:08:25-03:00"
+  "updated_at": "2026-11-22T22:17:55-03:00"
 }
