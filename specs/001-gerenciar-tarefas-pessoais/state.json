@@ -32,7 +32,11 @@
     "demo/public/js/tasks.js": "E4",
     "demo/tests/unit/app-state.test.js": "E4",
     "demo/tests/unit/storage.test.js": "E4",
-    "demo/tests/unit/task-model.test.js": "E4"
+    "demo/tests/unit/task-model.test.js": "E4",
+    "demo/public/styles.css": "E4",
+    "demo/tests/e2e/cadastro-lista.spec.js": "E4",
+    "demo/tests/e2e/titulo-obrigatorio.spec.js": "E4",
+    "demo/tests/unit/cadastro.test.js": "E4"
   },
   "gates": {
     "E0": {
@@ -113,13 +117,15 @@
       "commit": "aa875e1"
     },
     "E4": {
-      "status": "Foundational validado; commit pendente",
-      "fase": "Foundational",
+      "status": "US1 validada; commit pendente",
+      "fase": "US1",
       "tasks": [
-        "T007",
-        "T008",
-        "T009",
-        "T010"
+        "T011",
+        "T012",
+        "T013",
+        "T014",
+        "T015",
+        "T016"
       ],
       "prerequisites_exit": 0,
       "fases": {
@@ -143,16 +149,35 @@
           },
           "status": "validado",
           "commit": "9d656a4"
+        },
+        "Foundational": {
+          "tasks": [
+            "T007",
+            "T008",
+            "T009",
+            "T010"
+          ],
+          "status_retorno": "DONE",
+          "delegation_id": "deleg_a0211ab0",
+          "discord": "confirmado",
+          "testes": {
+            "comando": "npm --prefix demo test",
+            "exit_code": 0,
+            "node_pass": 32,
+            "chromium_pass": 1
+          },
+          "status": "validado",
+          "commit": "3e756d0"
         }
       },
       "status_retorno": "DONE",
-      "delegation_id": "deleg_a0211ab0",
+      "delegation_id": "deleg_86b0e14d",
       "discord": "confirmado",
       "testes": {
         "comando": "npm --prefix demo test",
         "exit_code": 0,
-        "node_pass": 32,
-        "chromium_pass": 1
+        "node_pass": 38,
+        "chromium_pass": 8
       }
     }
   },
@@ -166,7 +191,13 @@
     "T007",
     "T008",
     "T009",
-    "T010"
+    "T010",
+    "T011",
+    "T012",
+    "T013",
+    "T014",
+    "T015",
+    "T016"
   ],
   "blockers": [],
   "human_checkpoints": {
@@ -176,5 +207,5 @@
       "mensagem": "Aprovo a especificação apresentada."
     }
   },
-  "updated_at": "2026-11-22T21:35:16-03:00"
+  "updated_at": "2026-11-22T21:43:21-03:00"
 }

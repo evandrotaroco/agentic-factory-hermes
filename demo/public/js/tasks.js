@@ -10,3 +10,8 @@ export function isTask(record) {
     && typeof title === 'string' && title.trim() !== ''
     && (status === TaskStatus.PENDING || status === TaskStatus.COMPLETED);
 }
+
+export function registerTask(tasks, id, title) {
+  const task = { id, title, status: TaskStatus.PENDING };
+  return isTask(task) ? [...tasks, task] : null;
+}
