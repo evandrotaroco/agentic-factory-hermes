@@ -41,7 +41,9 @@
     "demo/tests/unit/concluir.test.js": "E4",
     "demo/tests/e2e/excluir.spec.js": "E4",
     "demo/tests/e2e/persistencia.spec.js": "E4",
-    "demo/tests/unit/excluir.test.js": "E4"
+    "demo/tests/unit/excluir.test.js": "E4",
+    "demo/tests/e2e/fluxos-integrados.spec.js": "E4",
+    "demo/tests/e2e/limites-interface.spec.js": "E4"
   },
   "gates": {
     "E0": {
@@ -122,14 +124,12 @@
       "commit": "aa875e1"
     },
     "E4": {
-      "status": "US3 validada; commit pendente",
-      "fase": "US3",
+      "status": "Polish validado; commit pendente",
+      "fase": "Polish",
       "tasks": [
-        "T021",
-        "T022",
-        "T023",
-        "T024",
-        "T025"
+        "T026",
+        "T027",
+        "T028"
       ],
       "prerequisites_exit": 0,
       "fases": {
@@ -212,17 +212,55 @@
           },
           "status": "validado",
           "commit": "44c279c"
+        },
+        "US3": {
+          "tasks": [
+            "T021",
+            "T022",
+            "T023",
+            "T024",
+            "T025"
+          ],
+          "status_retorno": "DONE",
+          "delegation_id": "deleg_823b8d1b",
+          "discord": "confirmado",
+          "testes": {
+            "comando": "npm --prefix demo test",
+            "exit_code": 0,
+            "node_pass": 44,
+            "chromium_pass": 12
+          },
+          "status": "validado",
+          "commit": "ba2b468"
         }
       },
       "status_retorno": "DONE",
-      "delegation_id": "deleg_823b8d1b",
+      "delegation_id": "deleg_cb2592cc",
       "discord": "confirmado",
+      "devolucoes": 1,
       "testes": {
         "comando": "npm --prefix demo test",
-        "exit_code": 0,
+        "saidas_orquestrador": [
+          0,
+          0,
+          0
+        ],
+        "node_pass_por_execucao": 44,
+        "chromium_pass_por_execucao": 18
+      },
+      "intermitencia_anterior": {
+        "comando": "npm --prefix demo test",
+        "saidas_orquestrador": [
+          0,
+          0,
+          1
+        ],
         "node_pass": 44,
-        "chromium_pass": 12
-      }
+        "chromium_pass_ultima": 15,
+        "chromium_fail_ultima": 3,
+        "sintoma": "ERR_CONNECTION_REFUSED e interface não inicializada em loopback"
+      },
+      "correcao": "Fila do servidor de teste ampliada para absorver conexões simultâneas, mantendo loopback e cobertura."
     }
   },
   "tasks_done": [
@@ -250,7 +288,10 @@
     "T022",
     "T023",
     "T024",
-    "T025"
+    "T025",
+    "T026",
+    "T027",
+    "T028"
   ],
   "blockers": [],
   "human_checkpoints": {
@@ -260,5 +301,5 @@
       "mensagem": "Aprovo a especificação apresentada."
     }
   },
-  "updated_at": "2026-11-22T21:53:35-03:00"
+  "updated_at": "2026-11-22T22:08:25-03:00"
 }

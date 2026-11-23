@@ -97,9 +97,9 @@ description: "Tarefas de implementação da feature Gerenciar tarefas pessoais"
 
 ## Fase 6: Polish (preocupações transversais)
 
-- [ ] T026 [P] Consolidar em `demo/tests/e2e/fluxos-integrados.spec.js` as regressões completas de SC-001 e SC-003 do [quickstart](quickstart.md), em contextos distintos: vazio → cadastro/lista → conclusão → exclusão/vazio sem recarga; e duas homônimas → concluir uma → excluir a outra → restar só a concluída (FR-001, FR-002, FR-003, FR-005, FR-006).
-- [ ] T027 [P] Adicionar em `demo/tests/e2e/limites-interface.spec.js` regressões de armazenamento ilegível/inválido com bloqueio e preservação dos dados, falha de escrita mantendo a lista confirmada e título com aparência de markup exibido literalmente, sem interpretar HTML (FR-003, FR-007; [contrato](contracts/web-ui.md)).
-- [ ] T028 Conferir, na configuração `demo/playwright.config.js` e na interface em `demo/public/index.html`, o isolamento, a descoberta das suítes, o servidor somente em loopback e a semântica dos controles; verificar em `demo/public/js/app.js` e `demo/public/js/storage.js` que não se registram conteúdos das tarefas nos logs. Rodar a suíte e confrontar as regressões com a matriz do [quickstart](quickstart.md), registrando cobertura e código de saída sem editar o quickstart (após T026 e T027).
+- [X] T026 [P] Consolidar em `demo/tests/e2e/fluxos-integrados.spec.js` as regressões completas de SC-001 e SC-003 do [quickstart](quickstart.md), em contextos distintos: vazio → cadastro/lista → conclusão → exclusão/vazio sem recarga; e duas homônimas → concluir uma → excluir a outra → restar só a concluída (FR-001, FR-002, FR-003, FR-005, FR-006).
+- [X] T027 [P] Adicionar em `demo/tests/e2e/limites-interface.spec.js` regressões de armazenamento ilegível/inválido com bloqueio e preservação dos dados, falha de escrita mantendo a lista confirmada e título com aparência de markup exibido literalmente, sem interpretar HTML (FR-003, FR-007; [contrato](contracts/web-ui.md)).
+- [X] T028 Conferir, na configuração `demo/playwright.config.js` e na interface em `demo/public/index.html`, o isolamento, a descoberta das suítes, o servidor somente em loopback e a semântica dos controles; verificar em `demo/public/js/app.js` e `demo/public/js/storage.js` que não se registram conteúdos das tarefas nos logs. Rodar a suíte e confrontar as regressões com a matriz do [quickstart](quickstart.md), registrando cobertura e código de saída sem editar o quickstart (após T026 e T027).
 
 ## Dependências e ordem de execução
 
